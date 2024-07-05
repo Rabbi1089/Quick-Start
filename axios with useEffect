@@ -10,7 +10,7 @@ useEffect(() => {
 //frontEnd Filter
 
 {jobs
-              .filter((j) => j.category === "web development")
-              .map((job, id) => (
-                <JobCard key={id} job={job}></JobCard>
-              ))}
+ .filter((j) => j.category === "web development")
+ .map((job, id) => (
+  <JobCard key={id} job={job}></JobCard>
+))}
