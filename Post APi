@@ -1,0 +1,27 @@
+ const handleFormSubmit = async(e)=> {
+    e.preventDefault()
+    const form = e.target;
+    const price =  parseFloat(form.price.value);
+    const jobId = _id;
+    const email = form.email.value;
+    const comment = form.comment.value;
+    const status = 'pending';
+    const bidsData = {jobId, price , email , comment , status, buyer_email, title ,deadline , startDate, category}
+  
+    try {
+      const {data } = await axios.post('http://localhost:9000/bid/' , bidsData)
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
+
+================================= ***** server site ******* ==========================
+    app.post('/bid', async (req, res) => {
+        const bidData = req.body;
+        const result = await  bidCollection.insertOne(bidData);
+        res.send(result);
+    })
+
