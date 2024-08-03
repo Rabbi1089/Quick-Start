@@ -1,0 +1,8 @@
+    //create token client site
+    if (currentUser) {
+      const loggedUser = { email : currentUser.email};
+      axios.post('http://localhost:5000/jwt' , loggedUser , {withCredentials: true})
+      .then(res => {
+        console.log('Token response', res.data)
+      })
+    }
