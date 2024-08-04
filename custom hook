@@ -1,0 +1,35 @@
+
+import { useContext } from 'react';
+
+const useAuth = () => {
+    const auth = useContext(authContext);
+    return auth;
+};
+
+export default useAuth;
+
+// in client we can use it as
+const {signIn} = useAuth
+
+#========= another example
+
+import { useEffect, useState } from "react";
+
+
+const useServices = () => {
+
+    const [services , setServices ] = useState();
+
+    useEffect(() => {
+        fetch('')
+        .then(res => res.json)
+        .then(data => setServices(data))
+    } , [])
+return services
+};
+
+export default useServices;
+
+//in client site 
+
+const services = useServices()
