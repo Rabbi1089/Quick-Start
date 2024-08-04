@@ -9,7 +9,7 @@ const useAuth = () => {
 export default useAuth;
 
 // in client we can use it as
-const {signIn} = useAuth
+const {signIn} = useAuth()
 
 #========= another example
 
