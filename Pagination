@@ -1,0 +1,7 @@
+Another way is to print an array
+of const pages = [...Array(numberOfPages).keys()]
+console.log(page)
+
+<div>
+{pages.map(page =><button>{page}</button>)}
+</div>
